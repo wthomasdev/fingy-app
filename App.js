@@ -1,13 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import Header from './src/components/header';
+import LandingPage from './src/components/landingPage';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Image source={require('./src/assets/backgroundpicforapp.jpg')} style={styles.container}>
+          <LandingPage />
+        </Image>
       </View>
     );
   }
@@ -16,8 +18,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    flexDirection: 'column',
     justifyContent: 'center',
-  },
+    alignItems: 'center'
+  }
 });
